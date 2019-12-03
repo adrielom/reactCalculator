@@ -1,0 +1,113 @@
+$side: 75px;
+$defaultFontSize: 1.2rem;
+$paddingRight: 25px;
+
+@mixin textCenter() {
+	text-align: end;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	font-size: $defaultFontSize;
+}
+
+.parent {
+	background-image: linear-gradient(to right bottom, #9d5dd5, #f49076);
+	height: 100vh;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.background {
+	height: 80vh;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: baseline;
+}
+
+.whiteText {
+	color: white;
+}
+
+.display {
+	width: 4 * $side;
+	height: 1.5 * $side;
+	background-color: rgb(33, 33, 33);
+	padding: 0;
+	margin: 0 auto;
+	margin-bottom: 0;
+	font-weight: 100;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 5px 5px 0px 0px;
+	.answer {
+		color: white;
+		@include textCenter();
+		font-size: $defaultFontSize * 2;
+	}
+	.equation {
+		color: #eb65a8;
+		@include textCenter();
+		p {
+			font-size: $defaultFontSize - 0.2rem;
+		}
+	}
+	p {
+		margin: 0;
+		padding-right: $paddingRight;
+	}
+}
+
+.buttonGroup {
+	height: 500px;
+	display: grid;
+	margin: 0 auto 0 auto;
+	grid-template-columns: $side $side $side $side;
+	grid-template-rows: $side $side $side $side $side;
+}
+.item {
+	height: $side;
+	width: $side;
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-image: linear-gradient(to top left, rgb(231, 231, 231), #fff);
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	&:hover {
+		background-image: linear-gradient(rgb(230, 227, 227), rgb(226, 226, 226));
+	}
+}
+
+.zero {
+	border-radius: 0px 0px 0px 5px;
+}
+.equals {
+	border-radius: 0px 0px 5px 0px;
+	background-image: linear-gradient(to top left, #d32e80, #e62f89);
+	grid-column: 3 / 5;
+	width: 2 * $side;
+	margin: 0;
+	color: white;
+	font-size: $defaultFontSize + 0.5rem;
+	&:hover {
+		background-image: linear-gradient(#b92971, #bd2973);
+	}
+}
+
+.purple {
+	background-image: linear-gradient(to top left, #8752d1, #9156e2);
+	margin: 0;
+	color: white;
+	&:hover {
+		background-image: linear-gradient(#7541be, #60349e);
+	}
+}
