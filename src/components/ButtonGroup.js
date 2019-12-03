@@ -3,13 +3,14 @@ import '../App.scss';
 
 import Item from './Item';
 import Equals from './Equals';
+import Clear from './Clear';
 
 export default function ButtonGroup() {
 	return (
 		<div className='buttonGroup'>
 			<Item className='item' value={'%'} />
 			<Item className='item' value={'+ / -'} />
-			<Item className='item' value={'C'} />
+			<Clear className='item' value='C' />
 			<Item className='item purple' value={'/'} />
 			<Item className='item' value={7} />
 			<Item className='item' value={8} />

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import '../App.scss';
+import Item from './Item';
 import { Context } from '../Context';
 
-export default function Equals({ value, className }) {
+export default function Clear({ value, className }) {
 	const { eqtn, aswr } = useContext(Context);
 	const [equation, setEquation] = eqtn;
 	const [answer, setAnswer] = aswr;
@@ -10,9 +10,8 @@ export default function Equals({ value, className }) {
 	return (
 		<div
 			onClick={() => {
-				let nString = equation.replace(/x/g, '*');
-				setAnswer(eval(nString));
-				console.log(`answer is ${answer} and value is ${value}`);
+				setEquation('');
+				setAnswer(0);
 			}}
 			className={className}>
 			<p>{value}</p>
