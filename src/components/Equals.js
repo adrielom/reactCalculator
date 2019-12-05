@@ -19,7 +19,11 @@ export default function Equals({ value, className }) {
 				try {
 					let aws = eval(nString.trim()).toFixed(2);
 					console.log(`aws ${aws}`);
-					setAnswer(aws !== undefined ? aws : 0);
+					if (aws !== null) {
+						setAnswer(aws.split('.')[1] == 0 ? aws.split('.')[0] : aws);
+					} else {
+						setAnswer(0);
+					}
 				} catch (e) {
 					setAnswer(0);
 				}
