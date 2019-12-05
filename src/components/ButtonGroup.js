@@ -9,7 +9,7 @@ export default function ButtonGroup() {
 	return (
 		<div className='buttonGroup'>
 			<Item className='item' value={'%'} />
-			<Item className='item' value={'+ / -'} />
+			<Item className='item' value={'x'} valueToJsx={true} />
 			<Clear className='item' value='C' />
 			<Item className='item purple' value={'/'} />
 			<Item className='item' value={7} />
