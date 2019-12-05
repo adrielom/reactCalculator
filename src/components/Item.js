@@ -16,9 +16,7 @@ export default function Item({ value, className, valueToJsx }) {
 				} else {
 					aws = equation + value.toString() + ' ';
 				}
-				console.log(aws);
 				setEquation(aws);
-				console.log(`equation is ${equation} and value is ${value}`);
 			}}
 			className={className}>
 			{!valueToJsx ? (

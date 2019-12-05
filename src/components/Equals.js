@@ -15,10 +15,8 @@ export default function Equals({ value, className }) {
 					.replace(/,/g, '.')
 					.replace(/ /g, '')
 					.replace(/%/g, '/100');
-				console.log(`nString ${nString}`);
 				try {
 					let aws = eval(nString.trim()).toFixed(2);
-					console.log(`aws ${aws}`);
 					if (aws !== null) {
 						setAnswer(aws.split('.')[1] == 0 ? aws.split('.')[0] : aws);
 					} else {
